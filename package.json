@@ -1,6 +1,6 @@
 {
   "name": "lazy-logger",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "a simple wrapper for winston and winston-daily-rotate-file that i use as a logger for fast prototyping. Ideal for lazy people.",
   "main": "src/index.js",
   "scripts": {
