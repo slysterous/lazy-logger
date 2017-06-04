@@ -3,7 +3,7 @@
 
 [![NPM](https://nodei.co/npm/lazy-logger.png?downloads=true&downloadRank=true)](https://nodei.co/npm/lazy-logger/)
 
-a simple wrapper for <a href="https://github.com/winstonjs/winston">winston</a> and winston-daily-rotate-file that i use as a logger for fast prototyping. Ideal for lazy people.
+a simple wrapper for <a href="https://github.com/winstonjs/winston">winston</a> and <a href="https://github.com/winstonjs/winston-daily-rotate-file">winston-daily-rotate-file</a> that i use as a logger for fast prototyping. Ideal for lazy people.
 ## Installation
 
 ```bashp
