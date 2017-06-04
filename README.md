@@ -3,8 +3,9 @@
 
 [![NPM](https://nodei.co/npm/lazy-logger.png?downloads=true&downloadRank=true)](https://nodei.co/npm/lazy-logger/)
 
-A multi-transport async logging library for node.js. <span style="font-size:28px; font-weight:bold;">&quot;CHILL WINSTON! ... I put it in the logs.&quot;</span>
-
 a simple wrapper for winston and winston-daily-rotate-file that i use as a logger for fast prototyping. Ideal for lazy people.
-# Installation
-[sudo] npm install --save lazy-logger
+## Installation
+
+```bashp
+npm install lazy-logger
+```
