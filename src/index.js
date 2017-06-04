@@ -15,6 +15,7 @@ const winston = require('winston');
  */
 function Logger(loggerlevel,enableFileLogs,path,dateformat){
     if(enableFileLogs==true){
+        console.log('Daily file logging enabled');
         //define daily rotate files for winston
         winston.transports.DailyRotateFile = require('winston-daily-rotate-file');
         //create a new transport
@@ -25,6 +26,7 @@ function Logger(loggerlevel,enableFileLogs,path,dateformat){
             level: loggerlevel?loggerlevel:'silly'
         });
     }else if(!enableFileLogs||enableFileLogs===false){
+        console.log('Daily file logging disabled');
         var transport={};
     }
     //define the winston logger 
