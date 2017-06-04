@@ -1,10 +1,10 @@
 {
   "name": "lazy-logger",
-  "version": "0.0.0-semantically-released",
+  "version": "0.0.0",
   "description": "a simple wrapper for winston and winston-daily-rotate-file that i use as a logger for fast prototyping. Ideal for lazy people.",
   "main": "src/index.js",
   "scripts": {
-    "commit":"git-cz",
+    "commit": "git-cz",
     "test": "mocha src/index.test.js -w",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -21,9 +21,9 @@
     "mocha": "^3.4.2",
     "semantic-release": "^6.3.6"
   },
-  "config":{
-    "commitizen":{
-    "path":"node_modules/cz-conventional-changelog"
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
     }
   },
   "repository": {
