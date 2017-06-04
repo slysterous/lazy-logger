@@ -1,0 +1,24 @@
+{
+  "name": "lazy-logger",
+  "version": "1.0.3",
+  "description": "a simple wrapper for winston and winston-daily-rotate-file that i use as a logger for fast prototyping. Ideal for lazy people.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified \" && exit 1"
+  },
+  "author": "Christos Petropoulos <chrispetropoulos91@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "winston": "^2.3.1",
+    "winston-daily-rotate-file": "^1.4.6"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slysterous/lazy-logger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/slysterous/lazy-logger/issues"
+  },
+  "homepage": "https://github.com/slysterous/lazy-logger#readme"
+}
