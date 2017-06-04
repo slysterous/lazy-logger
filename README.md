@@ -4,7 +4,9 @@
 [![NPM](https://nodei.co/npm/lazy-logger.png?downloads=true&downloadRank=true)](https://nodei.co/npm/lazy-logger/)
 
 a simple wrapper for <a href="https://github.com/winstonjs/winston">winston</a> and <a href="https://github.com/winstonjs/winston-daily-rotate-file">winston-daily-rotate-file</a> that i use as a logger for fast prototyping. Ideal for lazy people.
+This module is just a lazy way to switch from the default console to winston while adding simple daily log files. 
 
+If you need a proper module to handle your logging, head over to <a href="https://github.com/winstonjs/winston">winston</a>
 ## Installation
 
 ```bashp
