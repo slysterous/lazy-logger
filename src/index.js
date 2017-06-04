@@ -14,15 +14,19 @@ const winston = require('winston');
  * @param {boolean} enableFileLogs - Enables or disables file logs
  */
 function Logger(loggerlevel,enableFileLogs,path,dateformat){
-    //define daily rotate files for winston
-    winston.transports.DailyRotateFile = require('winston-daily-rotate-file');
-    //create a new transport
-    var transport = new winston.transports.DailyRotateFile({
-		filename: path,
-        datePattern: dateformat,
-        prepend: false,
-        level: loggerlevel?loggerlevel:'silly'
-    });
+    if(enableFileLogs==true){
+        //define daily rotate files for winston
+        winston.transports.DailyRotateFile = require('winston-daily-rotate-file');
+        //create a new transport
+        var transport = new winston.transports.DailyRotateFile({
+            filename: path,
+            datePattern: dateformat,
+            prepend: false,
+            level: loggerlevel?loggerlevel:'silly'
+        });
+    }else if(!enableFileLogs||enableFileLogs===false){
+        var transport={};
+    }
     //define the winston logger 
     this.logger= new (winston.Logger)({
         transports: [
@@ -33,6 +37,7 @@ function Logger(loggerlevel,enableFileLogs,path,dateformat){
             }),transport
         ]
     });
+
     //set the winston logger's level
     this.logger.level = loggerlevel?loggerlevel:'silly';
     //then print the instances active modes
