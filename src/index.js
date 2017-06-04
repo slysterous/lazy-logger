@@ -25,12 +25,7 @@ function Logger(loggerlevel,enableFileLogs,path,dateformat){
             prepend: false,
             level: loggerlevel?loggerlevel:'silly'
         });
-    }else if(!enableFileLogs||enableFileLogs===false){
-        console.log('Daily file logging disabled');
-        var transport={};
-    }
-    //define the winston logger 
-    this.logger= new (winston.Logger)({
+        this.logger= new (winston.Logger)({
         transports: [
             // colorize the output to the console
             new (winston.transports.Console)({
@@ -39,6 +34,20 @@ function Logger(loggerlevel,enableFileLogs,path,dateformat){
             }),transport
         ]
     });
+    }else if(!enableFileLogs||enableFileLogs===false){
+        console.log('Daily file logging disabled');
+        this.logger= new (winston.Logger)({
+        transports: [
+            // colorize the output to the console
+            new (winston.transports.Console)({
+                timestamp: (new Date()).toLocaleTimeString(),
+                colorize: true,
+            })
+        ]
+    });
+    }
+    //define the winston logger 
+    
 
     //set the winston logger's level
     this.logger.level = loggerlevel?loggerlevel:'silly';
