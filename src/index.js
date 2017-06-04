@@ -15,7 +15,6 @@ const winston = require('winston');
  */
 function Logger(loggerlevel,enableFileLogs,path,dateformat){
     if(enableFileLogs==true){
-        console.log('Daily file logging enabled');
         //define daily rotate files for winston
         winston.transports.DailyRotateFile = require('winston-daily-rotate-file');
         //create a new transport
@@ -51,15 +50,6 @@ function Logger(loggerlevel,enableFileLogs,path,dateformat){
 
     //set the winston logger's level
     this.logger.level = loggerlevel?loggerlevel:'silly';
-    //then print the instances active modes
-    console.log('\nActive Logger Modes are:')
-    this.logger.silly("Silly Enabled!");
-    this.logger.debug("Debug Enabled!");
-    this.logger.verbose("Verbose Enabled!");
-    this.logger.info("Info Enabled!");
-    this.logger.warn("Warn Enabled!");
-    this.logger.error("Error Enabled");
-    console.log("\n");
 }
 /**@memberof Logger */
 Logger.prototype.silly=function(){
