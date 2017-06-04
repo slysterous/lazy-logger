@@ -1,10 +1,12 @@
 {
   "name": "lazy-logger",
-  "version": "1.0.3",
+  "version": "0.0.0-semantically-released",
   "description": "a simple wrapper for winston and winston-daily-rotate-file that i use as a logger for fast prototyping. Ideal for lazy people.",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified \" && exit 1"
+    "commit":"git-cz",
+    "test": "mocha src/index.test.js -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "author": "Christos Petropoulos <chrispetropoulos91@gmail.com>",
   "license": "MIT",
@@ -12,10 +14,21 @@
     "winston": "^2.3.1",
     "winston-daily-rotate-file": "^1.4.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.0.1",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
+    "mocha": "^3.4.2",
+    "semantic-release": "^6.3.6"
+  },
+  "config":{
+    "commitizen":{
+    "path":"node_modules/cz-conventional-changelog"
+    }
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/slysterous/lazy-logger.git"
+    "url": "https://github.com/slysterous/lazy-logger.git"
   },
   "bugs": {
     "url": "https://github.com/slysterous/lazy-logger/issues"
