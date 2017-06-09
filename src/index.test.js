@@ -2,8 +2,14 @@ var expect=require('chai').expect;
 var lazyLogger=require('./index');
 var logger;
 describe('lazyLogger',function(){
-    it('lazy-logger should not return null',function(){
+    it('lazy-logger is exported correcly',function(){
         expect(lazyLogger!=undefined).to.be.true;
+    })
+    describe('lazylogger',function(){
+        it('Work as a console logger, without file logs',function(){
+            logger=new lazyLogger('info',false);
+            expect(logger!=undefined).to.be.true;
+        })
     })
     describe('silly',function(){
         it('prototype.silly should be a function',function(){

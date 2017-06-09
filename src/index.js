@@ -34,7 +34,7 @@ function Logger(loggerlevel,enableFileLogs,path,dateformat){
         ]
     });
     }else if(!enableFileLogs||enableFileLogs===false){
-        console.log('Daily file logging disabled');
+        //console.log('Daily file logging disabled');
         this.logger= new (winston.Logger)({
         transports: [
             // colorize the output to the console
