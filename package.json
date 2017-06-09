@@ -1,6 +1,6 @@
 {
   "name": "lazy-logger",
-  "version": "1.0.6-semantically-released",
+  "version": "0.0.0-semantically-released",
   "description": "a simple wrapper for winston and winston-daily-rotate-file that i use as a logger for fast prototyping. Ideal for lazy people.",
   "main": "src/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "dependencies": {
     "winston": "^2.3.1",
     "winston-daily-rotate-file": "^1.4.6"
-  }, 
+  },
   "devDependencies": {
     "chai": "^4.0.1",
     "commitizen": "^2.9.6",

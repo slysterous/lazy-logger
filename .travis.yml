@@ -9,7 +9,6 @@ node_js:
   - '6'
   - '4'
 before_script:
-  - chmod 0777 ./node_modules/.bin/mocha
   - npm prune
 script:
   - npm run test:single
